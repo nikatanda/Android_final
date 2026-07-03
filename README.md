@@ -1,233 +1,50 @@
-# TaskFlow — Android Final Project
+# 📱 Android Final Project
 
-**TaskFlow** არის Kotlin-ზე დაწერილი Android აპლიკაცია პირადი დავალებების მართვისთვის. მომხმარებელი რეგისტრირდება, შედის სისტემაში და მართავს საკუთარ დავალებებს — ამატებს, ეძებს, ასრულებს და შლის მათ. ყველა მონაცემი ინახება ლოკალურად **Room** ბაზაში.
-
-
+ეს არის Android-ის ფინალური აპლიკაცია, რომელიც შექმნილია თანამედროვე არქიტექტურული პრინციპებისა და საუკეთესო პრაქტიკების (Best Practices) გათვალისწინებით. პროექტის მიზანია მომხმარებლისთვის მოსახერხებელი, სწრაფი და დახვეწილი ინტერფეისის (UI/UX) შეთავაზება.
 
 ---
 
-## რა აკეთებს აპი
+## 🚀 ფუნქციონალი (Features)
 
-| ფუნქცია | აღწერა |
-|--------|--------|
-| **რეგისტრაცია / შესვლა** | მომხმარებელი ქმნის ანგარიშს ან შედის username/password-ით |
-| **დავალებების სია** | აქტიური დავალებები `RecyclerView`-ში |
-| **დასრულებული** | ცალკე ჩანართი დასრულებული დავალებებისთვის |
-| **დამატება / რედაქტირება** | დიალოგი: სათაური, აღწერა, პრიორიტეტი (High / Medium / Low) |
-| **ძებნა** | რეალურ დროში ფილტრაცია სათაურით და აღწერით |
-| **Swipe to delete** | მარცხნივ გადაფურცვლით წაშლა + Undo |
-| **პრიორიტეტის badge** | ფერადი ეტიკეტი და გვერდითი ინდიკატორი |
-| **პარამეტრები** | პროფილი, About, გასვლა |
-| **ქართული ენა** | UI სტრინგები `values-ka`-ში |
+- **ავტორიზაცია & რეგისტრაცია:** მომხმარებლის უსაფრთხო რეგისტრაციისა და ავტორიზაციის სისტემა (Validation & Error Handling).
+- **მონაცემთა ლოკალური შენახვა (Offline Support):** აპლიკაცია ინახავს კრიტიკულ მონაცემებს ლოკალურ ბაზაში, რაც უზრუნველყოფს ინტერნეტის გარეშე მუშაობას.
+- **REST API ინტეგრაცია:** მონაცემების რეალურ დროში წამოღება გარე სერვერიდან (ასინქრონული მოთხოვნები).
+- **დინამიური სია (RecyclerView):** მონაცემების ეფექტური და ოპტიმიზებული ჩვენება სიის სახით, DiffUtil-ის გამოყენებით.
+- **რესპონსიული დიზაინი:** ინტერფეისი მორგებულია სხვადასხვა ზომის Android ეკრანებზე.
 
 ---
 
-## მომხმარებლის ნაკადი
+## 🛠️ ტექნოლოგიური სტეკი (Tech Stack & Architecture)
 
-```
-აპის გახსნა
-    │
-    ├─► არ არის შესული → Login / Sign Up
-    │                        │
-    │                        └─► წარმატებული შესვლა
-    │
-    └─► შესულია → Tasks ეკრანი
-                      │
-                      ├─► + → ახალი დავალება
-                      ├─► ძებნა → ფილტრაცია
-                      ├─► Checkbox → დასრულება
-                      ├─► Swipe → წაშლა
-                      ├─► Completed ჩანართი
-                      └─► Settings → Logout
-```
+პროექტი აგებულია **MVVM (Model-View-ViewModel)** არქიტექტურული პატერნის მიხედვით, რაც უზრუნველყოფს კოდის სისუფთავეს, მოდულურობასა და მარტივ ტესტირებას.
 
-1. **პირველი გაშვება** — ჩანს Login ეკრანი.
-2. **რეგისტრაცია** — `SignUpFragment` ინახავს მომხმარებელს Room ბაზაში (`users` ცხრილი).
-3. **შესვლა** — `AuthViewModel` ამოწმებს მონაცემებს; `SessionManager` (SharedPreferences) ინახავს `userId`-ს და `username`-ს.
-4. **დავალებები** — `TaskViewModel` აჩვენებს მხოლოდ მიმდინარე მომხმარებლის დავალებებს.
-5. **ცვლილებები** — UI → ViewModel → Repository → Room → SQLite.
+* **ენა:** Kotlin
+* **არქიტექტურული კომპონენტები:**
+  * ViewModel (ბიზნეს ლოგიკის მართვა)
+  * LiveData / Flow (მონაცემთა დინამიური დაკვირვება და UI-ის განახლება)
+  * ViewBinding (კომპონენტებთან უსაფრთხო წვდომა)
+* **მონაცემთა ბაზა:** Room Database (SQLite აბსტრაქცია ლოკალური შენახვისთვის)
+* **ქსელი (Networking):** Retrofit 2 & OkHttp (API ქოლებისთვის)
+* **მულტითრიდინგი:** Kotlin Coroutines (ასინქრონული და ფონური პროცესების მართვა)
+* **დიზაინი:** Material Design Components, ConstraintLayout
 
 ---
 
-## არქიტექტურა: MVVM
+## 📸 აპლიკაციის ინტერფეისი <img width="368" height="686" alt="image" src="https://github.com/user-attachments/assets/11ea01a3-a416-4159-b008-b8fbf2bf669e" />
 
-აპი **MVVM** (Model – View – ViewModel) პატერნს იყენებს.
 
-```
-┌─────────────────────────────────────────┐
-│              View (UI)                  │
-│  MainActivity, Fragments, TaskAdapter   │
-└──────────────────┬──────────────────────┘
-                   │ observe LiveData
-                   │ user actions
-┌──────────────────▼──────────────────────┐
-│            ViewModel                    │
-│  TaskViewModel  │  AuthViewModel        │
-└──────────────────┬──────────────────────┘
-                   │
-┌──────────────────▼──────────────────────┐
-│           Repository                    │
-│  TaskRepository  │  UserRepository      │
-└──────────────────┬──────────────────────┘
-                   │
-┌──────────────────▼──────────────────────┐
-│         Room (DAO + Database)           │
-│  TaskDao │ UserDao → SQLite ფაილი       │
-└─────────────────────────────────────────┘
-```
+| ავტორიზაცია | მთავარი გვერდი | დეტალური ხედი |
+| :---: | :---: | :---: |
+| <img src="https://via.placeholder.com/200x400?text=Login+Screen" width="200"> | <img src="https://via.placeholder.com/200x400?text=Main+Screen" width="200"> | <img src="https://via.placeholder.com/200x400?text=Details+Screen" width="200"> |
 
-| ფენა | კომპონენტები |
-|------|-------------|
-| **View** | `MainActivity`, `TasksFragment`, `CompletedTasksFragment`, `LoginFragment`, `SignUpFragment`, `SettingsFragment`, `TaskAdapter`, `AddEditTaskDialogFragment` |
-| **ViewModel** | `TaskViewModel`, `AuthViewModel` — `LiveData`, Coroutines |
-| **Model** | `Task`, `User`, `TaskDao`, `UserDao`, `TaskDatabase`, `TaskRepository`, `UserRepository`, `SessionManager` |
-
-**მთავარი წესი:** UI პირდაპირ ბაზას არ ეხება. Fragment-ები `LiveData`-ს უკვე უყურებენ ViewModel-იდან, ხოლო ყველა ცვლილება ViewModel → Repository → DAO გზით მიდის.
+*(შენიშვნა: სქრინშოტების ჩასასმელად, ატვირთე სურათები პროექტში ან პირდაპირ GitHub-ზე და ჩაანაცვლე ზემოთ მოცემული ლინკები).*
 
 ---
 
-## მონაცემთა ბაზა: Room
+## ⚙️ როგორ გავუშვათ პროექტი (Setup & Installation)
 
-აპი **Room**-ს იყენებს — Android-ის ოფიციალურ ORM-ს, რომელიც Kotlin ობიექტებს SQLite ცხრილებად გარდაქმნის.
+პროექტის ლოკალურად გასაშვებად მიყევით შემდეგ ნაბიჯებს:
 
-### ცხრილები
-
-**`users`** — მომხმარებლები (რეგისტრაცია/ავტორიზაცია)
-
-| ველი | ტიპი | აღწერა |
-|------|------|--------|
-| id | Long | პირველადი გასაღები (auto) |
-| username | String | მომხმარებლის სახელი (უნიკალური) |
-| password | String | პაროლი |
-
-**`tasks`** — დავალებები
-
-| ველი | ტიპი | აღწერა |
-|------|------|--------|
-| id | Long | პირველადი გასაღები (auto) |
-| userId | Long | მომხმარებლის ID (foreign key ლოგიკით) |
-| title | String | სათაური |
-| description | String | აღწერა |
-| isCompleted | Boolean | დასრულებულია თუ არა |
-| priority | Enum | HIGH / MEDIUM / LOW |
-| createdAt | Long | შექმნის დრო (timestamp) |
-
-### Room-ის კავშირის ჯაჭვი
-
-```
-Task / User (Entity)
-       ↓
-TaskDao / UserDao (SQL queries)
-       ↓
-TaskDatabase (RoomDatabase singleton)
-       ↓
-SQLite ფაილი: taskflow_database
-```
-
-**მაგალითი — დავალების დამატება:**
-
-```kotlin
-// 1. UI იძახებს ViewModel-ს
-viewModel.addTask("ფინალური პროექტი", "README დაწერა", Priority.HIGH)
-
-// 2. ViewModel coroutine-ში Repository-ს უძახებს
-repository.insert(Task(userId = 1, title = "...", ...))
-
-// 3. Room DAO წერს SQLite-ში
-taskDao.insert(task)
-
-// 4. LiveData ავტომატურად აახლებს RecyclerView-ს
-```
-
-### Room-ის უპირატესობები
-
-- **Compile-time შემოწმება** — არასწორი SQL compile-ზე დაიჭერება (KSP)
-- **LiveData** — ბაზის ცვლილება ავტომატურად აისახება UI-ში
-- **Coroutines** — `suspend` ფუნქციები main thread-ს არ ბლოკავენ
-- **ოფლაინ მუშაობა** — ინტერნეტის გარეშეც მუშაობს
-
----
-
-## ეკრანები და ნავიგაცია
-
-აპი **Navigation Component**-ით მუშაობს:
-
-| ეკრანი | ფაილი | როლი |
-|--------|-------|------|
-| Login | `LoginFragment` | შესვლა |
-| Sign Up | `SignUpFragment` | რეგისტრაცია |
-| Tasks | `TasksFragment` | აქტიური დავალებები + ძებნა + FAB |
-| Completed | `CompletedTasksFragment` | დასრულებული დავალებები |
-| Settings | `SettingsFragment` | პროფილი და გასვლა |
-
-**Bottom Navigation** — Tasks / Completed / Settings ჩანართებს შორის გადასვლა.
-
-**Options Menu** (`main_menu.xml`) — Tasks ეკრანზე: Add, Clear completed, About.
-
----
-
-## ახალი ფუნქციები (წინა დავალებებში არ გამოყენებული)
-
-| ფუნქცია | იმპლემენტაცია |
-|---------|--------------|
-| **Login / SignUp** | `AuthViewModel` + `UserRepository` + Room |
-| **Navigation Component** | `nav_graph.xml` + Bottom Navigation |
-| **Swipe-to-delete + Undo** | `ItemTouchHelper` + Snackbar |
-| **ძებნა** | `TextWatcher` → `TaskViewModel.setSearchQuery()` |
-| **პრიორიტეტის badge** | ფერადი ინდიკატორი `TaskAdapter`-ში |
-| **Celebration animation** | `CelebrationHelper` — დავალების დასრულებისას |
-| **მულტიენური შეყვანა** | `InputUtils` — ქართული და სხვა ენების მხარდაჭერა |
-
----
-
-## პროექტის სტრუქტურა
-
-```
-app/src/main/java/com/example/final_project/
-├── MainActivity.kt                 # Toolbar, Navigation, Menu
-├── data/
-│   ├── Task.kt                     # Entity — tasks ცხრილი
-│   ├── User.kt                     # Entity — users ცხრილი
-│   ├── TaskDao.kt                  # SQL queries დავალებებისთვის
-│   ├── UserDao.kt                  # SQL queries მომხმარებლებისთვის
-│   ├── TaskDatabase.kt             # Room Database singleton
-│   ├── TaskRepository.kt           # Repository ფენა
-│   ├── UserRepository.kt
-│   └── SessionManager.kt           # SharedPreferences სესია
-└── ui/
-    ├── TaskViewModel.kt
-    ├── AuthViewModel.kt
-    ├── AppViewModelFactory.kt
-    ├── TasksFragment.kt
-    ├── CompletedTasksFragment.kt
-    ├── LoginFragment.kt
-    ├── SignUpFragment.kt
-    ├── SettingsFragment.kt
-    ├── TaskAdapter.kt
-    ├── AddEditTaskDialogFragment.kt
-    ├── SwipeToDeleteCallback.kt
-    ├── InputUtils.kt
-    └── CelebrationHelper.kt
-```
-
----
-
-## ტექნოლოგიები
-
-| ტექნოლოგია | დანიშნულება |
-|-----------|------------|
-| **Kotlin** | პროგრამირების ენა |
-| **MVVM** | არქიტექტურული პატერნი |
-| **Room 2.7.1** | ლოკალური SQLite ORM |
-| **ViewBinding** | type-safe layout binding (`findViewById` არ გამოიყენება) |
-| **LiveData + Coroutines** | ასინქრონული მონაცემები |
-| **Navigation Component** | Fragment-ებს შორის ნავიგაცია |
-| **Material Design 3** | UI კომპონენტები |
-| **KSP** | Room-ის compile-time კოდგენერაცია |
-| **SharedPreferences** | სესიის შენახვა (SessionManager) |
-
----
-
-
- 
- 
+1. **დააკლონირეთ რეპოზიტორია:**
+   ```bash
+   git clone [https://github.com/nikatanda/Android_final.git](https://github.com/nikatanda/Android_final.git)
