@@ -2,7 +2,7 @@
 
 **TaskFlow** არის Kotlin-ზე დაწერილი Android აპლიკაცია პირადი დავალებების მართვისთვის. მომხმარებელი რეგისტრირდება, შედის სისტემაში და მართავს საკუთარ დავალებებს — ამატებს, ეძებს, ასრულებს და შლის მათ. ყველა მონაცემი ინახება ლოკალურად **Room** ბაზაში.
 
-**GitHub:** [https://github.com/Ts1po/Final_in_Android_Dev_UNI](https://github.com/Ts1po/Final_in_Android_Dev_UNI)
+
 
 ---
 
@@ -268,5 +268,6 @@ app/src/main/java/com/example/final_project/
 ## ავტორი
 
 ფინალური გამოცდა — Kotlin Android Development
-#   A n d r o i d _ f i n a l  
+#   A n d r o i d _ f i n a l 
+ 
  
