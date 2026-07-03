@@ -1,4 +1,4 @@
-# 📱 Android Final Project
+<img width="344" height="669" alt="image" src="https://github.com/user-attachments/assets/dd0ac7b5-9a60-437b-8959-c47cfbabd625" /># 📱 Android Final Project
 
 ეს არის Android-ის ფინალური აპლიკაცია, რომელიც შექმნილია თანამედროვე არქიტექტურული პრინციპებისა და საუკეთესო პრაქტიკების (Best Practices) გათვალისწინებით. პროექტის მიზანია მომხმარებლისთვის მოსახერხებელი, სწრაფი და დახვეწილი ინტერფეისის (UI/UX) შეთავაზება.
 
@@ -37,8 +37,8 @@
 | :---: | :---: | :---: |
 | <img width="368" height="686" alt="image" src="https://github.com/user-attachments/assets/0f580e1d-c87e-4d33-bbff-04712a3dc15f" />
  | <img width="356" height="659" alt="image" src="https://github.com/user-attachments/assets/b2fe9b4a-ba3b-40c7-8ede-50f52e6d578e" />
-| ![Uploading image.png…]()
- |
+| <img width="344" height="669" alt="Screenshot 2026-07-03 161818" src="https://github.com/user-attachments/assets/44d0a951-3389-4f36-bd77-1c741ae1bbe5" />
+|
 
 
 
