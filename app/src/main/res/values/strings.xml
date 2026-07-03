@@ -1,0 +1,56 @@
+<resources>
+    <string name="app_name">TaskFlow</string>
+    <string name="add_task">Add Task</string>
+    <string name="edit_task">Edit Task</string>
+    <string name="task_title">Title</string>
+    <string name="task_description">Description</string>
+    <string name="task_priority">Priority</string>
+    <string name="save">Save</string>
+    <string name="cancel">Cancel</string>
+    <string name="search">Search</string>
+    <string name="search_hint">Search tasks…</string>
+    <string name="clear_completed">Clear completed</string>
+    <string name="about">About</string>
+    <string name="empty_state">No tasks yet</string>
+    <string name="empty_state_subtitle">Tap + to add your first task.</string>
+    <string name="empty_completed_state">No completed tasks yet</string>
+    <string name="empty_completed_subtitle">Mark tasks as done from the Tasks tab ✓</string>
+    <string name="task_deleted">Task deleted</string>
+    <string name="undo">Undo</string>
+    <string name="completed_cleared">Completed tasks cleared</string>
+    <string name="about_message">TaskFlow — Final Project\nMVVM + Room + Navigation\nBuilt with Kotlin</string>
+
+    <string name="login">Login</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="username">Username</string>
+    <string name="password">Password</string>
+    <string name="login_title">Welcome Back</string>
+    <string name="login_subtitle">Sign in to manage your tasks</string>
+    <string name="sign_up_title">Create Account</string>
+    <string name="sign_up_subtitle">Register to start organizing tasks</string>
+    <string name="go_to_sign_up">New user? Create an account</string>
+    <string name="go_to_login">Already have an account? Login</string>
+    <string name="settings">Settings</string>
+    <string name="profile_info">Profile Info</string>
+    <string name="username_label">Username: %1$s</string>
+    <string name="logout">Logout</string>
+    <string name="nav_tasks">Tasks</string>
+    <string name="nav_completed">Completed</string>
+
+    <string name="error_empty_fields">Please fill in all fields.</string>
+    <string name="error_invalid_credentials">Username or password is incorrect.</string>
+    <string name="error_user_exists">A user with this name already exists.</string>
+    <string name="registration_success">Registration completed successfully.</string>
+
+    <string name="priority_high">High</string>
+    <string name="priority_medium">Medium</string>
+    <string name="priority_low">Low</string>
+
+    <string-array name="completion_messages">
+        <item>Great job! Task completed 🎉</item>
+        <item>One step closer! Keep going 💪</item>
+        <item>Done! You\'re on fire 🔥</item>
+        <item>Nice work! ✨</item>
+        <item>Task crushed! 🚀</item>
+    </string-array>
+</resources>

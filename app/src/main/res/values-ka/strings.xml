@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TaskFlow</string>
+    <string name="add_task">დავალების დამატება</string>
+    <string name="edit_task">დავალების რედაქტირება</string>
+    <string name="task_title">სათაური</string>
+    <string name="task_description">აღწერა</string>
+    <string name="task_priority">პრიორიტეტი</string>
+    <string name="save">შენახვა</string>
+    <string name="cancel">გაუქმება</string>
+    <string name="search">ძებნა</string>
+    <string name="search_hint">დავალებების ძებნა…</string>
+    <string name="clear_completed">დასრულებულების გასუფთავება</string>
+    <string name="about">შესახებ</string>
+    <string name="empty_state">ჯერ არ გაქვს დავალებები</string>
+    <string name="empty_state_subtitle">დააჭირე + პირველი დავალების დასამატებლად.</string>
+    <string name="empty_completed_state">დასრულებული დავალებები არ არის</string>
+    <string name="empty_completed_subtitle">დაასრულე დავალებები Tasks ჩანართიდან ✓</string>
+    <string name="task_deleted">დავალება წაიშალა</string>
+    <string name="undo">გაუქმება</string>
+    <string name="completed_cleared">დასრულებული დავალებები გასუფთავდა</string>
+    <string name="about_message">TaskFlow — საბოლოო პროექტი\nMVVM + Room + Navigation\nKotlin-ით შექმნილი</string>
+
+    <string name="login">შესვლა</string>
+    <string name="sign_up">რეგისტრაცია</string>
+    <string name="username">მომხმარებლის სახელი</string>
+    <string name="password">პაროლი</string>
+    <string name="login_title">კეთილი იყოს თქვენი მობრძანება</string>
+    <string name="login_subtitle">შედი და მართე შენი დავალებები</string>
+    <string name="sign_up_title">ანგარიშის შექმნა</string>
+    <string name="sign_up_subtitle">დარეგისტრირდი და დაიწყე ორგანიზება</string>
+    <string name="go_to_sign_up">ახალი მომხმარებელი? შექმენი ანგარიში</string>
+    <string name="go_to_login">უკვე გაქვს ანგარიში? შესვლა</string>
+    <string name="settings">პარამეტრები</string>
+    <string name="profile_info">პროფილი</string>
+    <string name="username_label">მომხმარებელი: %1$s</string>
+    <string name="logout">გასვლა</string>
+    <string name="nav_tasks">დავალებები</string>
+    <string name="nav_completed">დასრულებული</string>
+
+    <string name="error_empty_fields">გთხოვ, შეავსე ყველა ველი.</string>
+    <string name="error_invalid_credentials">მომხმარებელი ან პაროლი არასწორია.</string>
+    <string name="error_user_exists">ამ სახელით მომხმარებელი უკვე არსებობს.</string>
+    <string name="registration_success">რეგისტრაცია წარმატებით დასრულდა.</string>
+
+    <string name="priority_high">მაღალი</string>
+    <string name="priority_medium">საშუალო</string>
+    <string name="priority_low">დაბალი</string>
+
+    <string-array name="completion_messages">
+        <item>შესანიშნავია! დავალება შესრულდა 🎉</item>
+        <item>კიდევ ერთი ნაბიჯი! გააგრძელე 💪</item>
+        <item>მზადაა! შენ ცეცხლზე ხარ 🔥</item>
+        <item>კარგი საქმე! ✨</item>
+        <item>დავალება გადაწყდა! 🚀</item>
+    </string-array>
+</resources>
