@@ -228,46 +228,6 @@ app/src/main/java/com/example/final_project/
 
 ---
 
-## როგორ გავუშვათ
 
-### მოთხოვნები
-
-- Android Studio (Ladybug ან უფრო ახალი)
-- JDK 11+
-- Android SDK (API 24–36)
-- ემულატორი ან ფიზიკური მოწყობილობა (Android 7.0+)
-
-### ნაბიჯები
-
-1. კлонირება:
-   ```bash
-   git clone https://github.com/Ts1po/Final_in_Android_Dev_UNI.git
-   ```
-2. Android Studio-ში გახსენი პროექტი
-3. **File → Sync Project with Gradle Files**
-4. ემულატორი აირჩიე და დააჭირე **Run ▶**
-5. შექმენი ანგარიში → შედი → დაამატე დავალებები
-
----
-
-## ფინალური გამოცდის მოთხოვნები
-
-| მოთხოვნა | იმპლემენტაცია |
-|---------|--------------|
-| Menu | `main_menu.xml` + `bottom_nav_menu.xml` |
-| List | `RecyclerView` + `TaskAdapter` |
-| MVVM | ViewModel + Repository + LiveData |
-| Database | **Room** (SQLite) |
-| ახალი ფუნქცია | Login/SignUp, Navigation, Swipe-to-delete, ძებნა, პრიორიტეტის badge |
-| ViewBinding | `findViewById` არ გამოიყენება |
-| README | ეს ფაილი |
-| Git | GitHub რეპოზიტორია |
-
----
-
-## ავტორი
-
-ფინალური გამოცდა — Kotlin Android Development
-#   A n d r o i d _ f i n a l 
  
  
