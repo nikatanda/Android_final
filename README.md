@@ -30,14 +30,17 @@
 
 ---
 
-## 📸 აპლიკაციის ინტერფეისი <img width="368" height="686" alt="image" src="https://github.com/user-attachments/assets/11ea01a3-a416-4159-b008-b8fbf2bf669e" />
+## 📸 აპლიკაციის ინტერფეისი
 
 
 | ავტორიზაცია | მთავარი გვერდი | დეტალური ხედი |
 | :---: | :---: | :---: |
-| <img src="https://via.placeholder.com/200x400?text=Login+Screen" width="200"> | <img src="https://via.placeholder.com/200x400?text=Main+Screen" width="200"> | <img src="https://via.placeholder.com/200x400?text=Details+Screen" width="200"> |
+| <img width="368" height="686" alt="image" src="https://github.com/user-attachments/assets/0f580e1d-c87e-4d33-bbff-04712a3dc15f" />
+ | <img width="356" height="659" alt="image" src="https://github.com/user-attachments/assets/b2fe9b4a-ba3b-40c7-8ede-50f52e6d578e" />
+| ![Uploading image.png…]()
+ |
 
-*(შენიშვნა: სქრინშოტების ჩასასმელად, ატვირთე სურათები პროექტში ან პირდაპირ GitHub-ზე და ჩაანაცვლე ზემოთ მოცემული ლინკები).*
+
 
 ---
 
